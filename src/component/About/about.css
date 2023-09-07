@@ -1,0 +1,119 @@
+.about_container{
+    display:flex;
+    /* grid-template-columns: 35% 50%; */
+    gap: 15%;
+}
+.about_me{
+    flex-basis: 150%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(45deg,transparent,var(--color-primary),transparent);
+    position: relative;
+}
+.myimage{
+    height: 100%;
+}
+.about_me_image {
+    border-radius: 2rem;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(0deg);
+    transition: var(--transition);
+    
+  }
+  .about_me_image:hover{
+    transform: rotate(10deg);
+  }
+  .about_content{
+    /* display: flex; */
+  }
+  .about_cards{
+    display: flex;
+    gap: 2rem;
+  }
+  .about_card{
+    background: var(--color-bg-varient);
+    border:1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+  }
+  .about_card:hover{
+    background: transparent;
+    background-color: var(--color-primary-varient);
+    cursor: default;
+  }
+  .about_icon{
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .about_card h5{
+    font-size: 0.95rem;
+  }
+  .about_card small{
+    font-size: 0.7rem;
+    color: var(--color-light);
+  }
+   .pe{
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
+  }
+
+  @media screen and (max-width:1024px) {
+    .about_container{
+        display: block;
+        gap: 0;
+
+    }
+    .about_me{
+       width: 50%;
+       margin: 2rem auto 4rem;
+    }
+    .about_cards{
+        display: flex;
+        justify-content: center;
+        margin-top: -2rem;
+    }
+    .pe{
+        margin: 3rem 5rem 1rem;
+    }
+    .aboutbtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .aboutbtn a{
+        position: absolute;
+        top: 0;
+    }
+    
+  }
+  @media screen and (max-width:600px) {
+    .about_cards{
+        display: flex;
+        justify-content: center;
+        margin-top: -2rem;
+        flex-wrap: wrap;
+    }
+    p{
+        margin: 3rem 5rem 1rem;
+    }
+    .aboutbtn{
+        /* margin: 1rem 23rem; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .aboutbtn a{
+        position: absolute;
+        top: 0;
+    }
+    
+  }
